@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nilan Beigi — AI, Automation & Digital Solutions</title>
+<meta name="description" content="Nilan Beigi: tech consulting, AI implementation, automation and websites for companies, small businesses and individuals. AI-powered, human-led. Vancouver and remote across Canada. English and Farsi.">
+<meta property="og:title" content="Nilan Beigi — AI, Automation & Digital Solutions">
+<meta property="og:description" content="Tech consulting and digital systems. AI-powered, human-led.">
+<meta name="theme-color" content="#4A0E2B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234A0E2B'/%3E%3Ctext x='16' y='21.5' font-size='14' font-family='Arial' font-weight='700' fill='%23F58BAA' text-anchor='middle'%3ENB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#4A0E2B; --night-2:#6B1A3E; --blue-grad:linear-gradient(155deg,#4A0E2B 0%,#7A1D45 55%,#A8325C 100%); --ink:#241520; --muted:#6A5462; --line:#F0E1E7; --bg:#FBF6F8; --white:#fff;
+  --indigo:#B4234F; --indigo-dark:#8E1A3E; --indigo-soft:#FCEBF1; --glow:#F58BAA; --sky:#FFC6D6;
+  --en:"Onest","Segoe UI",system-ui,sans-serif; --fa:"Vazirmatn",Tahoma,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--white);color:var(--ink);font:400 17px/1.6 var(--en);-webkit-font-smoothing:antialiased}
+:root[lang="fa"] body{font-family:var(--fa);line-height:1.85}
+[lang="fa"]{font-family:var(--fa)}
+a{color:var(--indigo)}
+:focus-visible{outline:3px solid var(--glow);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:24px}
+h1,h2,h3,h4{margin:0;line-height:1.12;letter-spacing:-.02em}
+:root[lang="fa"] h1,:root[lang="fa"] h2,:root[lang="fa"] h3{letter-spacing:0;line-height:1.4}
+p{margin:0}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--indigo);color:#fff;border:0;border-radius:12px;padding:14px 22px;font:600 16px var(--en);text-decoration:none;cursor:pointer;transition:transform .2s,background .2s,box-shadow .2s}
+:root[lang="fa"] .btn{font-family:var(--fa)}
+.btn:hover{background:var(--indigo-dark);transform:translateY(-2px);box-shadow:0 10px 24px -10px rgba(180,35,79,.7)}
+.btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.35)}
+.btn.ghost:hover{box-shadow:inset 0 0 0 1.5px #fff;background:rgba(255,255,255,.06)}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(74,14,43,.9);backdrop-filter:blur(10px);color:#fff;transition:box-shadow .3s}
+header.scrolled{box-shadow:0 8px 24px -12px rgba(0,0,0,.5)}
+.bar{display:flex;align-items:center;gap:24px;height:66px}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:700}
+.mark{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-size:13px;font-weight:800;color:var(--night);background:linear-gradient(135deg,var(--glow),#FFD0DD)}
+nav{display:flex;gap:24px;margin-inline-start:auto}
+nav a{color:#F2D6E0;text-decoration:none;font-weight:500;font-size:15px;transition:color .2s}
+nav a:hover{color:#fff}
+.lang{display:flex;border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:3px}
+.lang button{border:0;background:none;border-radius:999px;padding:5px 12px;font:600 14px var(--en);color:#E3B9C8;cursor:pointer}
+.lang button[lang="fa"]{font-family:var(--fa)}
+.lang button[aria-pressed="true"]{background:#fff;color:var(--night)}
+.bar .btn{padding:9px 16px;font-size:15px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:var(--blue-grad);color:#fff}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,210,225,.2) 1px,transparent 1px);background-size:26px 26px;mask-image:linear-gradient(180deg,#000 40%,transparent)}
+.hero::after{content:"";position:absolute;width:640px;height:640px;inset-inline-end:-120px;top:-160px;background:radial-gradient(circle,rgba(255,140,175,.4),transparent 65%)}
+.hero-in{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;padding-block:72px 84px}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,198,214,.35);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:600;color:var(--sky)}
+.badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--glow);box-shadow:0 0 0 0 rgba(245,139,170,.7);animation:ping 2.4s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(245,139,170,.7)}70%{box-shadow:0 0 0 10px rgba(245,139,170,0)}100%{box-shadow:0 0 0 0 rgba(245,139,170,0)}}
+.hero h1{font-size:clamp(46px,6.6vw,86px);font-weight:800;margin-top:20px;letter-spacing:-.035em}
+.tagline{display:block;margin-top:10px;letter-spacing:0;font-size:clamp(19px,2vw,24px);font-weight:600;background:linear-gradient(90deg,var(--sky),#fff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-line{margin-top:20px;color:#F0D3DD;font-size:18px;max-width:50ch}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.loc{margin-top:22px;color:#CFA2B3;font-size:14.5px}
+.map{width:100%;max-width:500px;justify-self:center}
+.map .ln{stroke:rgba(245,139,170,.55);stroke-width:1.6;fill:none;stroke-dasharray:160;stroke-dashoffset:160;animation:draw 1.2s ease-out forwards}
+.map .ln:nth-of-type(2){animation-delay:.15s}.map .ln:nth-of-type(3){animation-delay:.3s}.map .ln:nth-of-type(4){animation-delay:.45s}.map .ln:nth-of-type(5){animation-delay:.6s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.map .node circle{fill:var(--night-2);stroke:rgba(245,139,170,.6);stroke-width:1.5}
+.map .node{opacity:0;animation:pop .5s ease-out forwards}
+.map .n1{animation-delay:.7s}.map .n2{animation-delay:.85s}.map .n3{animation-delay:1s}.map .n4{animation-delay:1.15s}.map .n5{animation-delay:1.3s}
+@keyframes pop{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:none}}
+.map .node,.map .core{transform-box:fill-box;transform-origin:center}
+.map text{fill:#FFE3EC;font:600 13px var(--en);text-anchor:middle;dominant-baseline:middle}
+:root[lang="fa"] .map text{font-family:var(--fa)}
+.map .core circle.c{fill:url(#coreGrad)}
+.map .core circle.ring{fill:none;stroke:rgba(245,139,170,.35);animation:breathe 3.2s ease-in-out infinite}
+@keyframes breathe{50%{transform:scale(1.12);opacity:.3}}
+.map .core text{fill:#fff;font-size:15px;font-weight:700}
+.map .pk{fill:#fff}
+
+/* sections */
+section.block{padding-block:84px}
+section.alt{background:var(--bg)}
+.head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:34px;flex-wrap:wrap}
+.head h2{font-size:clamp(32px,3.6vw,46px);font-weight:800}
+.head p{color:var(--muted);font-size:18px}
+
+/* services */
+.svcs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.svc{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:24px;transition:transform .25s,border-color .25s,box-shadow .25s}
+.svc:hover{transform:translateY(-4px);border-color:#F3BFD0;box-shadow:0 20px 40px -24px rgba(142,26,62,.35)}
+.svc-top{display:flex;align-items:center;gap:12px}
+.ic{width:44px;height:44px;flex:none;padding:10px;border-radius:12px;background:var(--indigo-soft);stroke:var(--indigo);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.svc h3{font-size:20px;font-weight:700}
+.svc-line{color:var(--muted);margin:12px 0 14px;font-size:15.5px}
+.svc ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.svc li{position:relative;padding-inline-start:22px;font-size:15.5px}
+.svc li::before{content:"";position:absolute;inset-inline-start:2px;top:.55em;width:9px;height:9px;border-radius:3px;background:var(--glow);transform:rotate(45deg)}
+.lead-svc{grid-row:span 2;background:var(--blue-grad);color:#fff;border-color:transparent;position:relative;overflow:hidden}
+.lead-svc::after{content:"";position:absolute;width:280px;height:280px;inset-inline-end:-90px;bottom:-110px;background:radial-gradient(circle,rgba(232,92,135,.45),transparent 70%)}
+.lead-svc .ic{background:rgba(245,139,170,.16);stroke:var(--sky)}
+.lead-svc .svc-line{color:#F0D3DD;font-size:17px}
+.lead-svc li{font-size:16.5px}
+.lead-svc h3{font-size:24px}
+
+/* work */
+.sites{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.shot{display:block;text-decoration:none;color:var(--ink)}
+.frame{border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 18px 40px -26px rgba(40,10,25,.45);transition:transform .3s,box-shadow .3s}
+.shot:hover .frame{transform:translateY(-5px) rotate(-.4deg);box-shadow:0 28px 50px -24px rgba(142,26,62,.45)}
+.dots{display:flex;gap:6px;padding:9px 12px;background:#F7F0F3;border-bottom:1px solid var(--line)}
+.dots i{width:9px;height:9px;border-radius:50%;background:#D3D6E8}
+.viewport{position:relative;aspect-ratio:16/10;overflow:hidden;background:linear-gradient(135deg,var(--indigo-soft),#fff)}
+.viewport iframe{position:absolute;top:0;left:0;width:1280px;height:800px;border:0;transform-origin:0 0;pointer-events:none}
+.cap{padding:14px 2px 0;display:grid;gap:2px}
+.cap b{font-size:17px}
+.cap span{color:var(--muted);font-size:15px}
+.go{color:var(--indigo)!important;font-weight:600;font-size:14.5px!important}
+.systems{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.sys{display:flex;gap:14px;align-items:center;text-decoration:none;color:var(--ink);background:var(--white);border:1px solid var(--line);border-radius:16px;padding:16px 18px;transition:transform .25s,border-color .25s}
+.sys:hover{transform:translateY(-3px);border-color:#F3BFD0}
+.sys div{display:grid;flex:1}
+.sys b{font-size:17px}.sys div span{color:var(--muted);font-size:14.5px;line-height:1.4}
+.more{margin-top:22px}.more a{font-weight:600}
+
+/* about + faq */
+.af{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+.af h2{font-size:clamp(30px,3.2vw,40px);font-weight:800;margin-bottom:16px}
+.about p{color:var(--muted);font-size:17.5px}
+.qs{margin-top:22px;display:grid;gap:4px}
+.qs span{font-size:clamp(24px,2.5vw,32px);font-weight:800;color:var(--ink)}
+.qs span:nth-child(2){padding-inline-start:.9em}.qs span:nth-child(3){padding-inline-start:1.8em;color:var(--indigo)}
+details{border-bottom:1px solid var(--line);padding:16px 0}
+summary{cursor:pointer;list-style:none;font-weight:600;font-size:17px;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--indigo);font-size:22px;line-height:1;transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);margin-top:8px}
+
+/* contact */
+.contact{background:var(--blue-grad);color:#fff;position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;width:560px;height:560px;inset-inline-start:-200px;bottom:-260px;background:radial-gradient(circle,rgba(232,92,135,.35),transparent 65%)}
+.c-in{position:relative;display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start}
+.contact h2{font-size:clamp(32px,3.6vw,46px);font-weight:800}
+.contact .sub{color:#F0D3DD;margin-top:12px;font-size:18px}
+.direct{margin-top:22px;color:#E3B9C8}.direct a{color:#fff;font-weight:600}
+form{background:var(--white);color:var(--ink);border-radius:18px;padding:26px;display:grid;gap:16px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label,legend{font-weight:600;font-size:15px}
+input,textarea{width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;font:inherit;background:var(--bg);color:var(--ink);transition:border-color .2s,background .2s}
+input:focus,textarea:focus{outline:none;border-color:var(--indigo);background:#fff}
+fieldset{border:0;margin:0;padding:0}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.pills label{display:flex;align-items:center;gap:8px;font-weight:500;border:1.5px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer;transition:border-color .2s,background .2s}
+.pills input{width:auto;margin:0;accent-color:var(--indigo)}
+.pills label:has(input:checked){border-color:var(--indigo);background:var(--indigo-soft)}
+.err{color:#B3261E;font-weight:600;min-height:1.3em;font-size:15px}
+footer{background:#3A0B22;color:#CFA2B3;padding-block:24px;font-size:14.5px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer a{color:#FFE3EC;margin-inline-start:16px}
+
+/* showcase */
+.show{width:100%;max-width:520px;justify-self:center}
+.show-frame{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.6),0 0 0 1px rgba(245,139,170,.25);transform:perspective(1200px) rotateY(-6deg) rotateX(3deg);transition:transform .6s}
+[dir="rtl"] .show-frame{transform:perspective(1200px) rotateY(6deg) rotateX(3deg)}
+.show:hover .show-frame{transform:none}
+.show-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#F7F0F3;border-bottom:1px solid var(--line)}
+.show-bar i{width:10px;height:10px;border-radius:50%;background:#E8D8DF}.show-bar i:first-child{background:#F19C99}.show-bar i:nth-child(2){background:#F4CF7A}.show-bar i:nth-child(3){background:#9BD7A4}
+.show-url{margin-inline-start:12px;flex:1;background:#fff;border-radius:6px;padding:3px 10px;font-size:12px;color:#A88A97;direction:ltr;text-align:left}
+.stage{position:relative;height:300px;color:var(--ink)}
+.scene{position:absolute;inset:0;padding:22px;opacity:0;visibility:hidden;transition:opacity .45s,visibility .45s}
+.scene.on{opacity:1;visibility:visible}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes blink{0%,100%{opacity:.25}50%{opacity:1}}
+@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(180,35,79,.15)}}
+.w-nav{display:flex;gap:10px;align-items:center}
+.w-nav b{width:26px;height:26px;border-radius:7px;background:var(--indigo)}.w-nav span{width:44px;height:8px;border-radius:4px;background:#F1E4EA}.w-nav span:first-of-type{margin-inline-start:auto}
+.w-hero{margin-top:18px;border-radius:12px;padding:20px;background:linear-gradient(135deg,#FDEFF4,#FFF8FA);display:grid;gap:9px;justify-items:start}
+.w-t{font-weight:800;font-size:20px}
+.w-l{width:85%;height:9px;border-radius:5px;background:#EEDDE4}.w-l.short{width:55%}
+.w-btn{margin-top:4px;background:var(--indigo);color:#fff;font-weight:700;font-size:13px;padding:7px 14px;border-radius:8px}
+.w-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}.w-cards i{height:62px;border-radius:10px;background:#F8F2F5;border:1px solid var(--line)}
+.sc-web.on .w-nav{animation:rise .5s both}.sc-web.on .w-hero{animation:rise .6s .2s both}.sc-web.on .w-cards i{animation:rise .5s both}
+.sc-web.on .w-cards i:nth-child(1){animation-delay:.5s}.sc-web.on .w-cards i:nth-child(2){animation-delay:.65s}.sc-web.on .w-cards i:nth-child(3){animation-delay:.8s}
+.sc-web.on .w-btn{animation:rise .4s 1s both, pulse 1.6s 1.6s infinite}
+.sc-chat{display:flex;flex-direction:column;gap:9px;justify-content:flex-end}
+.bub{max-width:78%;padding:9px 13px;border-radius:14px;font-size:14px;line-height:1.4;margin:0;opacity:0}
+.bub.me{align-self:flex-end;background:var(--indigo);color:#fff;border-end-end-radius:4px}
+.bub.ai{align-self:flex-start;background:#F7F0F3;border-end-start-radius:4px}
+.typing{display:flex;gap:4px}.typing i{width:6px;height:6px;border-radius:50%;background:#A88A97;animation:blink 1s infinite}.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+.sc-chat.on .b1{animation:rise .4s .2s both}
+.sc-chat.on .typing{animation:typingshow 1s .7s both}
+@keyframes typingshow{0%{opacity:0;max-height:40px}15%,85%{opacity:1;max-height:40px}100%{opacity:0;max-height:0;padding-block:0;margin-top:-9px}}
+.sc-chat.on .b2{animation:rise .4s 1.7s both}.sc-chat.on .b3{animation:rise .4s 2.6s both}.sc-chat.on .b4{animation:rise .4s 3.4s both}
+.sc-auto ol{list-style:none;margin:0;padding:6px 0 0;display:grid;gap:12px}
+.sc-auto li{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;background:#FAF5F7;border:1px solid var(--line);font-weight:600;font-size:15px;opacity:.35}
+.ck{width:24px;height:24px;border-radius:50%;flex:none;background:#F1E4EA;position:relative}
+.ck::after{content:"";position:absolute;left:8px;top:5px;width:6px;height:11px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg);opacity:0}
+.sc-auto.on li{animation:lit .4s both}
+.sc-auto.on li:nth-child(1){animation-delay:.3s}.sc-auto.on li:nth-child(2){animation-delay:1s}.sc-auto.on li:nth-child(3){animation-delay:1.7s}.sc-auto.on li:nth-child(4){animation-delay:2.4s}
+@keyframes lit{to{opacity:1;background:#fff;border-color:#F3BFD0;box-shadow:0 6px 16px -10px rgba(142,26,62,.5)}}
+.sc-auto.on li .ck{animation:ckon .35s both}
+.sc-auto.on li:nth-child(1) .ck{animation-delay:.45s}.sc-auto.on li:nth-child(2) .ck{animation-delay:1.15s}.sc-auto.on li:nth-child(3) .ck{animation-delay:1.85s}.sc-auto.on li:nth-child(4) .ck{animation-delay:2.55s}
+@keyframes ckon{to{background:var(--indigo)}}
+.sc-auto.on li .ck::after{animation:ckmark .2s both}
+.sc-auto.on li:nth-child(1) .ck::after{animation-delay:.6s}.sc-auto.on li:nth-child(2) .ck::after{animation-delay:1.3s}.sc-auto.on li:nth-child(3) .ck::after{animation-delay:2s}.sc-auto.on li:nth-child(4) .ck::after{animation-delay:2.7s}
+@keyframes ckmark{to{opacity:1}}
+.kpi{display:grid;gap:2px}.kpi span{color:var(--muted);font-size:14px;font-weight:600}
+.kpi b{font-size:34px;font-weight:800;letter-spacing:-.02em}.kpi em{font-style:normal;color:#1F8A4C;font-weight:600;font-size:13.5px}
+.bars{direction:ltr;display:flex;align-items:flex-end;gap:10px;height:150px;margin-top:16px;border-bottom:1px solid var(--line)}
+.bars i{flex:1;height:var(--h);border-radius:6px 6px 0 0;background:linear-gradient(180deg,var(--glow),var(--indigo));transform-origin:bottom}
+.sc-dash.on .bars i{animation:grow .6s both}
+.sc-dash.on .bars i:nth-child(1){animation-delay:.2s}.sc-dash.on .bars i:nth-child(2){animation-delay:.3s}.sc-dash.on .bars i:nth-child(3){animation-delay:.4s}.sc-dash.on .bars i:nth-child(4){animation-delay:.5s}.sc-dash.on .bars i:nth-child(5){animation-delay:.6s}.sc-dash.on .bars i:nth-child(6){animation-delay:.7s}.sc-dash.on .bars i:nth-child(7){animation-delay:.8s}
+.show-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:16px}
+.show-tabs button{position:relative;overflow:hidden;border:1px solid rgba(255,198,214,.25);background:rgba(255,255,255,.04);color:#F0D3DD;border-radius:10px;padding:9px 6px;font:600 13.5px var(--en);cursor:pointer}
+:root[lang="fa"] .show-tabs button{font-family:var(--fa)}
+.show-tabs button[aria-selected="true"]{color:#fff;border-color:rgba(255,198,214,.6);background:rgba(245,139,170,.14)}
+.show-tabs em{position:absolute;inset-inline-start:0;bottom:0;height:3px;width:0;background:var(--glow)}
+.show-tabs button[aria-selected="true"] em{animation:fill var(--dur,4.6s) linear both}
+.show.paused .show-tabs em{animation-play-state:paused}
+@keyframes fill{to{width:100%}}
+/* facts */
+.facts{background:var(--night-2);color:#fff;border-top:1px solid rgba(245,139,170,.15)}
+.facts-in{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-block:26px}
+.facts-in div{display:grid;gap:2px}
+.facts-in b{font-size:28px;font-weight:800;color:#fff}
+.facts-in span{color:#E3B9C8;font-size:14.5px}
+/* engagement */
+.engs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.en-card{position:relative;border:1px solid var(--line);border-radius:18px;padding:26px;background:var(--white);transition:transform .25s,box-shadow .25s}
+.en-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px -24px rgba(142,26,62,.35)}
+.en-card .num{display:block;font-weight:800;font-size:14px;color:var(--indigo);margin-bottom:14px}
+.en-card h3{font-size:21px;font-weight:700}
+.en-card p{color:var(--muted);margin-top:8px}
+.en-card.hot{border-color:var(--indigo);box-shadow:0 0 0 1px var(--indigo)}
+.tag{position:absolute;top:22px;inset-inline-end:22px;background:var(--indigo);color:#fff;font-size:12px;font-weight:700;border-radius:999px;padding:3px 10px}
+.hire{margin-top:26px;padding:16px 18px;border-radius:14px;background:var(--indigo-soft);color:var(--ink);font-size:15.5px}
+.hire a{font-weight:600}
+@media (max-width:1000px){.facts-in{grid-template-columns:1fr 1fr}.engs{grid-template-columns:1fr}.show-frame,[dir="rtl"] .show-frame{transform:none}}
+@media (max-width:600px){.stage{height:280px}.show-tabs{grid-template-columns:1fr 1fr}.bub{font-size:13.5px}}
+
+
+/* buttons on blue areas: white, so they stand out */
+header .btn,.hero .btn:not(.ghost){background:#fff;color:var(--indigo-dark);box-shadow:0 10px 24px -12px rgba(0,0,0,.45)}
+header .btn:hover,.hero .btn:not(.ghost):hover{background:#FDEFF4;color:var(--indigo-dark)}
+.loc{color:#F2CCDA}
+/* scroll reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;transition-delay:var(--d,0ms)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .rv{opacity:1;transform:none}.map .node{opacity:1}.map .ln{stroke-dashoffset:0}}
+
+@media (max-width:1000px){
+  nav{display:none}.lang{margin-inline-start:auto}
+  .hero-in{grid-template-columns:1fr;padding-block:52px 60px}.map{max-width:420px}
+  .svcs{grid-template-columns:1fr 1fr}.lead-svc{grid-row:auto;grid-column:1/-1}
+  .sites,.systems{grid-template-columns:1fr 1fr}
+  .af,.c-in{grid-template-columns:1fr;gap:36px}
+}
+@media (max-width:600px){
+  .bar .btn{display:none}.logo .nm{font-size:16px}
+  .svcs,.sites,.systems,.two{grid-template-columns:1fr}
+  section.block{padding-block:60px}
+}
+</style>
+</head>
+<body>
+<header id="hdr">
+  <div class="wrap bar">
+    <a class="logo" href="#top"><span class="mark" aria-hidden="true">NB</span><span class="nm" data-i18n="brandmark">NB Consulting</span></a>
+    <nav aria-label="Main"><a href="#services"><span data-i18n="nav_services">Services</span></a><a href="#work"><span data-i18n="nav_work">Work</span></a><a href="#about"><span data-i18n="nav_about">About</span></a></nav>
+    <div class="lang" role="group" aria-label="Language / زبان">
+      <button type="button" lang="en" data-set-lang="en" aria-pressed="true">EN</button>
+      <button type="button" lang="fa" data-set-lang="fa" aria-pressed="false">فارسی</button>
+    </div>
+    <a class="btn" href="#contact"><span data-i18n="nav_cta">Free consultation</span></a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-in">
+      <div>
+        <span class="badge" data-i18n="badge">AI-powered, human-led</span>
+        <h1><span data-i18n="brand">Nilan Beigi</span><span class="tagline" data-i18n="tagline">AI, Automation &amp; Digital Solutions</span></h1>
+        <p class="hero-line" data-i18n="hero_line">Tech consulting and digital systems for companies, small businesses, freelancers and individuals, in any industry. I use AI to work faster, and a person stays in charge of every decision.</p>
+        <div class="ctas"><a class="btn" href="#contact"><span data-i18n="cta1">Book a free consultation</span></a><a class="btn ghost" href="#services"><span data-i18n="cta2">See services</span></a></div>
+        <p class="loc" data-i18n="loc">Based in Vancouver, working with clients worldwide, in English and Farsi.</p>
+      </div>
+      <div class="show" aria-label="Examples of what I build">
+        <div class="show-frame">
+          <div class="show-bar"><i></i><i></i><i></i><span class="show-url" id="showUrl">your-business.com</span></div>
+          <div class="stage">
+            <div class="scene sc-web on">
+              <div class="w-nav"><b></b><span></span><span></span><span></span></div>
+              <div class="w-hero"><span class="w-t" data-i18n="w_title">Your business</span><span class="w-l"></span><span class="w-l short"></span><span class="w-btn" data-i18n="w_book">Book now</span></div>
+              <div class="w-cards"><i></i><i></i><i></i></div>
+            </div>
+            <div class="scene sc-chat">
+              <p class="bub me b1" data-i18n="ch_q">Are you open on Sunday?</p>
+              <p class="bub ai typing" aria-hidden="true"><i></i><i></i><i></i></p>
+              <p class="bub ai b2" data-i18n="ch_a">Yes, 10 am to 6 pm. Would you like to book a time?</p>
+              <p class="bub me b3" data-i18n="ch_q2">Yes, 2 pm please.</p>
+              <p class="bub ai b4" data-i18n="ch_a2">Booked. See you Sunday at 2 pm.</p>
+            </div>
+            <div class="scene sc-auto">
+              <ol><li><span class="ck"></span><span data-i18n="au1">New order received</span></li><li><span class="ck"></span><span data-i18n="au2">Added to your system</span></li><li><span class="ck"></span><span data-i18n="au3">Invoice created</span></li><li><span class="ck"></span><span data-i18n="au4">Customer notified</span></li></ol>
+            </div>
+            <div class="scene sc-dash">
+              <div class="kpi"><span data-i18n="da_k">Sales this month</span><b id="kpiNum">$48,250</b><em data-i18n="da_up">up 18% from last month</em></div>
+              <div class="bars"><i style="--h:38%"></i><i style="--h:52%"></i><i style="--h:45%"></i><i style="--h:63%"></i><i style="--h:58%"></i><i style="--h:74%"></i><i style="--h:92%"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="show-tabs" role="tablist" aria-label="Examples">
+          <button role="tab" aria-selected="true"><span data-i18n="sc_web">Website</span><em></em></button>
+          <button role="tab" aria-selected="false"><span data-i18n="sc_chat">AI assistant</span><em></em></button>
+          <button role="tab" aria-selected="false"><span data-i18n="sc_auto">Automation</span><em></em></button>
+          <button role="tab" aria-selected="false"><span data-i18n="sc_dash">Dashboard</span><em></em></button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="block alt" id="services">
+    <div class="wrap">
+      <div class="head rv"><h2 data-i18n="svc_t">Services</h2><p data-i18n="svc_s">Start with advice. Build only what you need.</p></div>
+      <div class="svcs"><article class="svc rv lead-svc" style="--d:0ms">
+  <div class="svc-top"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v10H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg><h3 data-i18n="s_consult">Tech consulting</h3></div><p class="svc-line" data-i18n="sl_consult">An honest look at your systems. Sometimes the answer isn&#x27;t AI.</p>
+  <ul><li><span data-i18n="sb_consult_0">Review of your current tools and workflows</span></li><li><span data-i18n="sb_consult_1">Where AI helps, and where it doesn&#x27;t</span></li><li><span data-i18n="sb_consult_2">Website and online presence check</span></li><li><span data-i18n="sb_consult_3">A clear plan with priorities and budget</span></li><li><span data-i18n="sb_consult_4">Help choosing the right software</span></li></ul>
+</article><article class="svc rv" style="--d:70ms">
+  <div class="svc-top"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/><path d="M10 10h4v4h-4z"/></svg><h3 data-i18n="s_ai">AI implementation</h3></div><p class="svc-line" data-i18n="sl_ai">AI that fits how your business already works.</p>
+  <ul><li><span data-i18n="sb_ai_0">Customer assistants for shops, restaurants and services</span></li><li><span data-i18n="sb_ai_1">Document and policy assistants for offices and clinics</span></li><li><span data-i18n="sb_ai_2">Stock and ordering assistants for retail</span></li><li><span data-i18n="sb_ai_3">Daily reporting for construction and field teams</span></li><li><span data-i18n="sb_ai_4">Private AI on your own computers, for sensitive data</span></li></ul>
+</article><article class="svc rv" style="--d:140ms">
+  <div class="svc-top"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><circle cx="18" cy="6" r="3"/><path d="M9 6h6M18 9v6M8.2 8.2l7.6 7.6"/></svg><h3 data-i18n="s_systems">Automation and business systems</h3></div><p class="svc-line" data-i18n="sl_systems">Less manual work between the tools you already use.</p>
+  <ul><li><span data-i18n="sb_systems_0">Connecting email, CRM, accounting and spreadsheets</span></li><li><span data-i18n="sb_systems_1">Automatic reports and reminders</span></li><li><span data-i18n="sb_systems_2">Custom tools for customers, stock and scheduling</span></li><li><span data-i18n="sb_systems_3">Dashboards for sales, costs and performance</span></li><li><span data-i18n="sb_systems_4">Data cleanup and moving to new systems</span></li></ul>
+</article><article class="svc rv" style="--d:210ms">
+  <div class="svc-top"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg><h3 data-i18n="s_web">Websites</h3></div><p class="svc-line" data-i18n="sl_web">Fast, clear websites that bring in customers.</p>
+  <ul><li><span data-i18n="sb_web_0">Company and business websites</span></li><li><span data-i18n="sb_web_1">Booking and online ordering</span></li><li><span data-i18n="sb_web_2">Redesigns and speed fixes</span></li><li><span data-i18n="sb_web_3">Websites in English and Farsi</span></li><li><span data-i18n="sb_web_4">Google Maps and search setup</span></li></ul>
+</article><article class="svc rv" style="--d:280ms">
+  <div class="svc-top"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4.5-6 8-6s7 2 8 6"/></svg><h3 data-i18n="s_people">For individuals</h3></div><p class="svc-line" data-i18n="sl_people">Not a company? I help people too.</p>
+  <ul><li><span data-i18n="sb_people_0">Personal website or portfolio</span></li><li><span data-i18n="sb_people_1">One-on-one help using AI tools for your work</span></li><li><span data-i18n="sb_people_2">Setting up email, domain and cloud storage</span></li><li><span data-i18n="sb_people_3">Small automations for freelancers</span></li></ul>
+</article></div>
+    </div>
+  </section>
+
+  <section class="block eng">
+    <div class="wrap">
+      <div class="head rv"><h2 data-i18n="eng_t">Ways to work together</h2><p data-i18n="eng_s">Start small or go all the way.</p></div>
+      <div class="engs">
+        <div class="en-card rv"><span class="num">01</span><h3 data-i18n="e1">Consulting session</h3><p data-i18n="e1d">A review of your systems and a clear, written plan you can use with anyone.</p></div>
+        <div class="en-card hot rv" style="--d:90ms"><span class="num">02</span><span class="tag" data-i18n="e_tag">Most popular</span><h3 data-i18n="e2">Project</h3><p data-i18n="e2d">I design, build and launch it, from a website to an AI system, at a fixed price.</p></div>
+        <div class="en-card rv" style="--d:180ms"><span class="num">03</span><h3 data-i18n="e3">Ongoing partner</h3><p data-i18n="e3d">Monthly support, improvements and advice as your business grows.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt" id="work">
+    <div class="wrap">
+      <div class="head rv"><h2 data-i18n="work_t">Selected work</h2><p data-i18n="work_s">Websites and systems I&#x27;ve built. Concept projects, made with sample data.</p></div>
+      <div class="sites"><a class="shot rv" style="--d:0ms" href="https://nilanbeigibeigi.github.io/NINA-Hair-salon-full-web-design-/" target="_blank" rel="noopener">
+  <div class="frame"><div class="dots"><i></i><i></i><i></i></div><div class="viewport"><iframe src="https://nilanbeigibeigi.github.io/NINA-Hair-salon-full-web-design-/" loading="lazy" tabindex="-1" aria-hidden="true" title="NINA Hair Studio preview"></iframe></div></div>
+  <div class="cap"><b>NINA Hair Studio</b><span data-i18n="site_NINA Hair Studio">Salon website with online booking</span><span class="go"><span data-i18n="open">Open website</span></span></div></a><a class="shot rv" style="--d:80ms" href="https://scroll-video-seven.vercel.app/" target="_blank" rel="noopener">
+  <div class="frame"><div class="dots"><i></i><i></i><i></i></div><div class="viewport"><iframe src="https://scroll-video-seven.vercel.app/" loading="lazy" tabindex="-1" aria-hidden="true" title="Setayesh Salon preview"></iframe></div></div>
+  <div class="cap"><b>Setayesh Salon</b><span data-i18n="site_Setayesh Salon">Studio website with motion design</span><span class="go"><span data-i18n="open">Open website</span></span></div></a><a class="shot rv" style="--d:160ms" href="https://nilanbeigibeigi.github.io/redline-motors/" target="_blank" rel="noopener">
+  <div class="frame"><div class="dots"><i></i><i></i><i></i></div><div class="viewport"><iframe src="https://nilanbeigibeigi.github.io/redline-motors/" loading="lazy" tabindex="-1" aria-hidden="true" title="Redline Motors preview"></iframe></div></div>
+  <div class="cap"><b>Redline Motors</b><span data-i18n="site_Redline Motors">Dealership website with a shop</span><span class="go"><span data-i18n="open">Open website</span></span></div></a></div>
+      <div class="systems"><a class="sys rv" style="--d:0ms" href="https://github.com/nilanbeigibeigi/shiftmate" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/><path d="M10 10h4v4h-4z"/></svg><div><b>ShiftMate</b><span data-i18n="sys_ShiftMate">AI assistant for store staff, with manager approval</span></div><span class="go"><span data-i18n="code">See the code</span></span></a><a class="sys rv" style="--d:80ms" href="https://github.com/nilanbeigibeigi/finpilot" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><circle cx="18" cy="6" r="3"/><path d="M9 6h6M18 9v6M8.2 8.2l7.6 7.6"/></svg><div><b>FinPilot</b><span data-i18n="sys_FinPilot">Finance dashboard and automatic invoice checks</span></div><span class="go"><span data-i18n="code">See the code</span></span></a><a class="sys rv" style="--d:160ms" href="https://github.com/nilanbeigibeigi/policypilot" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v10H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg><div><b>PolicyPilot</b><span data-i18n="sys_PolicyPilot">Private assistant for company documents</span></div><span class="go"><span data-i18n="code">See the code</span></span></a></div>
+      <p class="more rv"><a href="https://nilanbeigibeigi.github.io/Nilan-Portfolio/" target="_blank" rel="noopener"><span data-i18n="more_work">Full portfolio</span></a></p>
+    </div>
+  </section>
+
+  <section class="block" id="about">
+    <div class="wrap af">
+      <div class="about rv">
+        <h2 data-i18n="about_t">About</h2>
+        <p data-i18n="about_1">I&#x27;m Nilan. I ran a busy grocery store for three and a half years, then studied Business IT and AI at BCIT. I learn how your business runs before I touch the technology.</p>
+        <p class="qs"><span data-i18n="q_better">Can this be better?</span><span data-i18n="q_faster">Can it be faster?</span><span data-i18n="q_grow">Can it grow with you?</span></p>
+        <p class="hire"><span data-i18n="hire">Hiring? I&#x27;m also open to contract, freelance and full-time roles in AI, data and automation.</span> <a href="https://nilanbeigibeigi.github.io/Nilan-Portfolio/" target="_blank" rel="noopener"><span data-i18n="hire_link">See my portfolio and résumé</span></a></p>
+      </div>
+      <div class="rv" style="--d:120ms">
+        <h2 data-i18n="faq_t">Questions</h2>
+        <details><summary><span data-i18n="q1">What if I don&#x27;t need AI?</span></summary><p><span data-i18n="a1">That&#x27;s fine. Often the right fix is a better website or a simpler process. I&#x27;ll tell you honestly.</span></p></details>
+        <details><summary><span data-i18n="q2">Can AI keep our data private?</span></summary><p><span data-i18n="a2">Yes. AI can run on your own computers or private cloud, so your data stays inside your company.</span></p></details>
+        <details><summary><span data-i18n="q3">Do you work remotely?</span></summary><p><span data-i18n="a3">Yes. I work remotely with clients anywhere in the world, and in person in Vancouver.</span></p></details>
+        <details><summary><span data-i18n="q4">How much does it cost?</span></summary><p><span data-i18n="a4">Every project is scoped. You get a fixed quote before anything starts.</span></p></details>
+        <details><summary><span data-i18n="q6">Do you work with any industry?</span></summary><p><span data-i18n="a6">Yes. Every business runs on customers, data and routine work. I learn yours first.</span></p></details>
+        <details><summary><span data-i18n="q5">Do you work in Farsi?</span></summary><p><span data-i18n="a5">Yes: Farsi, English, or both.</span></p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="block contact" id="contact">
+    <div class="wrap c-in">
+      <div class="rv">
+        <h2 data-i18n="book_t">Start a conversation</h2>
+        <p class="sub" data-i18n="book_s">Tell me what you&#x27;re working on. I reply within one business day.</p>
+        <p class="direct"><span data-i18n="direct">Prefer email?</span> <a href="mailto:nilan.beigi.beigi@gmail.com">nilan.beigi.beigi@gmail.com</a></p>
+      </div>
+      <form id="bookForm" class="rv" style="--d:120ms" novalidate>
+        <div class="two">
+          <label><span data-i18n="f_name">Your name</span><input name="name" autocomplete="name"></label>
+          <label><span data-i18n="f_co">Company (optional)</span><input name="co" autocomplete="organization"></label>
+        </div>
+        <label><span data-i18n="f_contact">Email or phone</span><input name="contact" autocomplete="email"></label>
+        <fieldset><legend><span data-i18n="f_who">I am</span></legend>
+          <div class="pills">
+            <label><input type="radio" name="who" value="Individual" checked><span data-i18n="w1">An individual</span></label>
+            <label><input type="radio" name="who" value="Small business"><span data-i18n="w2">A small business</span></label>
+            <label><input type="radio" name="who" value="Company"><span data-i18n="w3">A company</span></label>
+            <label><input type="radio" name="who" value="Recruiter / hiring manager"><span data-i18n="w4">A recruiter or hiring manager</span></label>
+          </div>
+        </fieldset>
+        <fieldset><legend><span data-i18n="f_int">Interested in</span></legend><div class="pills"><label><input type="checkbox" name="int" value="consult"><span data-i18n="s_consult">Tech consulting</span></label><label><input type="checkbox" name="int" value="ai"><span data-i18n="s_ai">AI implementation</span></label><label><input type="checkbox" name="int" value="systems"><span data-i18n="s_systems">Automation and business systems</span></label><label><input type="checkbox" name="int" value="web"><span data-i18n="s_web">Websites</span></label><label><input type="checkbox" name="int" value="hire"><span data-i18n="n_hire">Hiring (contract or full-time)</span></label><label><input type="checkbox" name="int" value="unsure"><span data-i18n="n_unsure">Not sure yet</span></label></div></fieldset>
+        <label><span data-i18n="f_msg">Message (optional)</span><textarea name="msg" rows="3"></textarea></label>
+        <p class="err" id="err" role="alert"></p>
+        <div><button class="btn" type="submit"><span data-i18n="f_send">Send</span></button></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span data-i18n="foot">© 2026 Nilan Beigi</span>
+    <span><a href="https://nilanbeigibeigi.github.io/Nilan-Portfolio/" target="_blank" rel="noopener"><span data-i18n="portfolio">Portfolio</span></a><a href="https://github.com/nilanbeigibeigi" target="_blank" rel="noopener">GitHub</a><a href="https://linkedin.com/in/nilan-beigi" target="_blank" rel="noopener">LinkedIn</a></span>
+  </div>
+</footer>
+
+<script>
+document.documentElement.classList.add("js");
+(function(){
+  var FA = {"brand": "نیلان بیگی", "tagline": "هوش مصنوعی، اتوماسیون و راهکارهای دیجیتال", "nav_services": "خدمات", "nav_work": "نمونه‌کارها", "nav_about": "درباره", "nav_cta": "مشاوره‌ی رایگان", "badge": "با قدرت هوش مصنوعی، با تصمیم انسان", "hero_line": "مشاوره‌ی فناوری و سیستم‌های دیجیتال برای شرکت‌ها، کسب‌وکارهای کوچک، فریلنسرها و افراد، در هر صنعتی. از هوش مصنوعی برای سریع‌تر کار کردن استفاده می‌کنم و تصمیم نهایی همیشه با انسان است.", "cta1": "رزرو مشاوره‌ی رایگان", "cta2": "مشاهده‌ی خدمات", "loc": "مستقر در ونکوور، همکاری با مشتریان در سراسر جهان، به فارسی و انگلیسی.", "m_center": "کسب‌وکار شما", "m_web": "وب‌سایت", "m_data": "داده", "m_auto": "اتوماسیون", "m_ai": "هوش مصنوعی", "m_team": "تیم شما", "svc_t": "خدمات", "svc_s": "با مشاوره شروع کنید. فقط چیزی را بسازید که لازم دارید.", "work_t": "نمونه‌کارهای منتخب", "work_s": "وب‌سایت‌ها و سیستم‌هایی که ساخته‌ام. پروژه‌های نمونه با داده‌ی آزمایشی.", "open": "باز کردن سایت", "code": "دیدن کد", "more_work": "نمونه‌کارهای کامل", "about_t": "درباره", "about_1": "من نیلان هستم. سه سال و نیم یک فروشگاه مواد غذایی شلوغ را اداره کردم و بعد در BCIT فناوری اطلاعات کسب‌وکار و هوش مصنوعی خواندم. پیش از دست زدن به تکنولوژی، می‌فهمم کسب‌وکارتان چطور کار می‌کند.", "q_better": "می‌شود بهترش کرد؟", "q_faster": "می‌شود سریع‌ترش کرد؟", "q_grow": "می‌تواند با شما رشد کند؟", "faq_t": "سؤال‌ها", "q1": "اگر به هوش مصنوعی نیاز نداشته باشم چه؟", "a1": "اشکالی ندارد. خیلی وقت‌ها راه‌حل درست یک وب‌سایت بهتر یا روند ساده‌تر است. صادقانه می‌گویم.", "q2": "هوش مصنوعی می‌تواند داده‌های ما را خصوصی نگه دارد؟", "a2": "بله. هوش مصنوعی می‌تواند روی کامپیوترها یا فضای ابری خصوصی شما اجرا شود تا داده‌ها داخل شرکت بماند.", "q3": "دورکاری هم انجام می‌دهید؟", "a3": "بله. از راه دور با مشتریان در هر جای دنیا کار می‌کنم و در ونکوور حضوری هم ملاقات می‌کنم.", "q4": "هزینه‌اش چقدر است؟", "a4": "هر پروژه جداگانه تعریف می‌شود. پیش از شروع کار، قیمت ثابت دریافت می‌کنید.", "q5": "به فارسی هم کار می‌کنید؟", "a5": "بله: فارسی، انگلیسی یا هر دو.", "book_t": "گفتگو را شروع کنیم", "book_s": "بگویید روی چه چیزی کار می‌کنید. ظرف یک روز کاری جواب می‌دهم.", "direct": "ایمیل را ترجیح می‌دهید؟", "f_name": "نام شما", "f_co": "شرکت (اختیاری)", "f_contact": "ایمیل یا شماره تماس", "f_who": "من", "w1": "یک فرد هستم", "w2": "یک کسب‌وکار کوچک هستم", "w3": "یک شرکت هستم", "f_int": "علاقه‌مند به", "n_unsure": "هنوز مطمئن نیستم", "f_msg": "پیام (اختیاری)", "f_send": "ارسال", "err_name": "لطفاً نامتان را بنویسید.", "err_contact": "لطفاً ایمیل یا شماره تماس بنویسید.", "err_int": "لطفاً حداقل یک گزینه را انتخاب کنید.", "foot": "© ۲۰۲۶ نیلان بیگی", "portfolio": "نمونه‌کارها و رزومه", "s_consult": "مشاوره‌ی فناوری", "sl_consult": "بررسی صادقانه‌ی سیستم‌هایتان. گاهی جواب هوش مصنوعی نیست.", "sb_consult_0": "بررسی ابزارها و روند کار فعلی", "sb_consult_1": "هوش مصنوعی کجا کمک می‌کند و کجا نه", "sb_consult_2": "بررسی وب‌سایت و حضور آنلاین", "sb_consult_3": "برنامه‌ی روشن با اولویت و بودجه", "sb_consult_4": "کمک در انتخاب نرم‌افزار مناسب", "s_ai": "پیاده‌سازی هوش مصنوعی", "sl_ai": "هوش مصنوعی که با روال فعلی کسب‌وکارتان جور است.", "sb_ai_0": "دستیار مشتری برای فروشگاه، رستوران و خدمات", "sb_ai_1": "دستیار اسناد و قوانین برای دفاتر و کلینیک‌ها", "sb_ai_2": "دستیار موجودی و سفارش برای خرده‌فروشی", "sb_ai_3": "گزارش روزانه برای ساخت‌وساز و تیم‌های میدانی", "sb_ai_4": "هوش مصنوعی خصوصی روی کامپیوترهای خودتان، برای داده‌های حساس", "s_systems": "اتوماسیون و سیستم‌های کسب‌وکار", "sl_systems": "کار دستی کمتر بین ابزارهایی که همین حالا دارید.", "sb_systems_0": "اتصال ایمیل، CRM، حسابداری و اکسل", "sb_systems_1": "گزارش‌ها و یادآوری‌های خودکار", "sb_systems_2": "ابزارهای اختصاصی برای مشتری، موجودی و زمان‌بندی", "sb_systems_3": "داشبورد فروش، هزینه و عملکرد", "sb_systems_4": "مرتب‌سازی داده و انتقال به سیستم جدید", "s_web": "وب‌سایت", "sl_web": "وب‌سایت سریع و روشن که مشتری می‌آورد.", "sb_web_0": "وب‌سایت شرکتی و کسب‌وکار", "sb_web_1": "رزرو و سفارش آنلاین", "sb_web_2": "بازطراحی و افزایش سرعت", "sb_web_3": "وب‌سایت به فارسی و انگلیسی", "sb_web_4": "راه‌اندازی گوگل مپ و جستجو", "s_people": "برای افراد", "sl_people": "شرکت نیستید؟ به افراد هم کمک می‌کنم.", "sb_people_0": "وب‌سایت شخصی یا نمونه‌کار", "sb_people_1": "کمک یک‌به‌یک برای استفاده از ابزارهای هوش مصنوعی در کارتان", "sb_people_2": "راه‌اندازی ایمیل، دامنه و فضای ابری", "sb_people_3": "خودکارسازی‌های کوچک برای فریلنسرها", "site_NINA Hair Studio": "سایت سالن با رزرو آنلاین", "site_Setayesh Salon": "سایت استودیو با طراحی متحرک", "site_Redline Motors": "سایت نمایشگاه خودرو با فروشگاه", "sys_ShiftMate": "دستیار هوشمند کارکنان فروشگاه، با تأیید مدیر", "sys_FinPilot": "داشبورد مالی و بررسی خودکار فاکتور", "sys_PolicyPilot": "دستیار خصوصی اسناد شرکت", "brandmark": "NB Consulting", "sc_web": "وب‌سایت", "sc_chat": "دستیار هوشمند", "sc_auto": "اتوماسیون", "sc_dash": "داشبورد", "w_title": "کسب‌وکار شما", "w_book": "رزرو کنید", "ch_q": "یکشنبه باز هستید؟", "ch_a": "بله، ۱۰ صبح تا ۶ عصر. می‌خواهید وقت رزرو کنید؟", "ch_q2": "بله، ساعت ۲ لطفاً.", "ch_a2": "رزرو شد. یکشنبه ساعت ۲ می‌بینیمتان.", "au1": "سفارش جدید رسید", "au2": "به سیستم شما اضافه شد", "au3": "فاکتور ساخته شد", "au4": "به مشتری اطلاع داده شد", "da_k": "فروش این ماه", "da_up": "۱۸٪ بیشتر از ماه قبل", "f1n": "+۲۰", "f1": "سیستم و وب‌سایت ساخته‌شده", "f2n": "۳٫۵ سال", "f2": "اداره‌ی عملیات واقعی یک کسب‌وکار", "f3n": "هر", "f3": "صنعتی، هر جای دنیا", "f4n": "فا / EN", "f4": "مشاوره به فارسی و انگلیسی", "eng_t": "روش‌های همکاری", "eng_s": "کوچک شروع کنید یا تا آخر پیش بروید.", "e1": "جلسه‌ی مشاوره", "e1d": "بررسی سیستم‌هایتان و یک برنامه‌ی مکتوب و روشن که با هر کسی می‌توانید اجرایش کنید.", "e2": "پروژه", "e2d": "طراحی، ساخت و راه‌اندازی می‌کنم؛ از وب‌سایت تا سیستم هوشمند، با قیمت ثابت.", "e3": "همراه دائمی", "e3d": "پشتیبانی، بهبود و مشاوره‌ی ماهانه همراه با رشد کسب‌وکارتان.", "e_tag": "پرطرفدارترین", "hire": "استخدام می‌کنید؟ برای همکاری قراردادی، فریلنس و تمام‌وقت در هوش مصنوعی، داده و اتوماسیون هم آماده‌ام.", "hire_link": "دیدن نمونه‌کارها و رزومه", "q6": "با هر صنعتی کار می‌کنید؟", "a6": "بله. هر کسب‌وکاری با مشتری، داده و کارهای روزمره می‌چرخد. اول مال شما را یاد می‌گیرم.", "w4": "استخدام‌کننده یا مدیر استخدام", "n_hire": "استخدام (قراردادی یا تمام‌وقت)"}, EN = {"brand": "Nilan Beigi", "tagline": "AI, Automation & Digital Solutions", "nav_services": "Services", "nav_work": "Work", "nav_about": "About", "nav_cta": "Free consultation", "badge": "AI-powered, human-led", "hero_line": "Tech consulting and digital systems for companies, small businesses, freelancers and individuals, in any industry. I use AI to work faster, and a person stays in charge of every decision.", "cta1": "Book a free consultation", "cta2": "See services", "loc": "Based in Vancouver, working with clients worldwide, in English and Farsi.", "m_center": "Your business", "m_web": "Website", "m_data": "Data", "m_auto": "Automation", "m_ai": "AI", "m_team": "Your team", "svc_t": "Services", "svc_s": "Start with advice. Build only what you need.", "work_t": "Selected work", "work_s": "Websites and systems I've built. Concept projects, made with sample data.", "open": "Open website", "code": "See the code", "more_work": "Full portfolio", "about_t": "About", "about_1": "I'm Nilan. I ran a busy grocery store for three and a half years, then studied Business IT and AI at BCIT. I learn how your business runs before I touch the technology.", "q_better": "Can this be better?", "q_faster": "Can it be faster?", "q_grow": "Can it grow with you?", "faq_t": "Questions", "q1": "What if I don't need AI?", "a1": "That's fine. Often the right fix is a better website or a simpler process. I'll tell you honestly.", "q2": "Can AI keep our data private?", "a2": "Yes. AI can run on your own computers or private cloud, so your data stays inside your company.", "q3": "Do you work remotely?", "a3": "Yes. I work remotely with clients anywhere in the world, and in person in Vancouver.", "q4": "How much does it cost?", "a4": "Every project is scoped. You get a fixed quote before anything starts.", "q5": "Do you work in Farsi?", "a5": "Yes: Farsi, English, or both.", "book_t": "Start a conversation", "book_s": "Tell me what you're working on. I reply within one business day.", "direct": "Prefer email?", "f_name": "Your name", "f_co": "Company (optional)", "f_contact": "Email or phone", "f_who": "I am", "w1": "An individual", "w2": "A small business", "w3": "A company", "f_int": "Interested in", "n_unsure": "Not sure yet", "f_msg": "Message (optional)", "f_send": "Send", "err_name": "Please add your name.", "err_contact": "Please add an email or phone number.", "err_int": "Please choose at least one option.", "foot": "© 2026 Nilan Beigi", "portfolio": "Portfolio", "s_consult": "Tech consulting", "sl_consult": "An honest look at your systems. Sometimes the answer isn't AI.", "sb_consult_0": "Review of your current tools and workflows", "sb_consult_1": "Where AI helps, and where it doesn't", "sb_consult_2": "Website and online presence check", "sb_consult_3": "A clear plan with priorities and budget", "sb_consult_4": "Help choosing the right software", "s_ai": "AI implementation", "sl_ai": "AI that fits how your business already works.", "sb_ai_0": "Customer assistants for shops, restaurants and services", "sb_ai_1": "Document and policy assistants for offices and clinics", "sb_ai_2": "Stock and ordering assistants for retail", "sb_ai_3": "Daily reporting for construction and field teams", "sb_ai_4": "Private AI on your own computers, for sensitive data", "s_systems": "Automation and business systems", "sl_systems": "Less manual work between the tools you already use.", "sb_systems_0": "Connecting email, CRM, accounting and spreadsheets", "sb_systems_1": "Automatic reports and reminders", "sb_systems_2": "Custom tools for customers, stock and scheduling", "sb_systems_3": "Dashboards for sales, costs and performance", "sb_systems_4": "Data cleanup and moving to new systems", "s_web": "Websites", "sl_web": "Fast, clear websites that bring in customers.", "sb_web_0": "Company and business websites", "sb_web_1": "Booking and online ordering", "sb_web_2": "Redesigns and speed fixes", "sb_web_3": "Websites in English and Farsi", "sb_web_4": "Google Maps and search setup", "s_people": "For individuals", "sl_people": "Not a company? I help people too.", "sb_people_0": "Personal website or portfolio", "sb_people_1": "One-on-one help using AI tools for your work", "sb_people_2": "Setting up email, domain and cloud storage", "sb_people_3": "Small automations for freelancers", "site_NINA Hair Studio": "Salon website with online booking", "site_Setayesh Salon": "Studio website with motion design", "site_Redline Motors": "Dealership website with a shop", "sys_ShiftMate": "AI assistant for store staff, with manager approval", "sys_FinPilot": "Finance dashboard and automatic invoice checks", "sys_PolicyPilot": "Private assistant for company documents", "brandmark": "NB Consulting", "sc_web": "Website", "sc_chat": "AI assistant", "sc_auto": "Automation", "sc_dash": "Dashboard", "w_title": "Your business", "w_book": "Book now", "ch_q": "Are you open on Sunday?", "ch_a": "Yes, 10 am to 6 pm. Would you like to book a time?", "ch_q2": "Yes, 2 pm please.", "ch_a2": "Booked. See you Sunday at 2 pm.", "au1": "New order received", "au2": "Added to your system", "au3": "Invoice created", "au4": "Customer notified", "da_k": "Sales this month", "da_up": "up 18% from last month", "f1n": "20+", "f1": "systems and websites built", "f2n": "3.5 yrs", "f2": "running real business operations", "f3n": "Any", "f3": "industry, anywhere in the world", "f4n": "EN / FA", "f4": "consulting in English and Farsi", "eng_t": "Ways to work together", "eng_s": "Start small or go all the way.", "e1": "Consulting session", "e1d": "A review of your systems and a clear, written plan you can use with anyone.", "e2": "Project", "e2d": "I design, build and launch it, from a website to an AI system, at a fixed price.", "e3": "Ongoing partner", "e3d": "Monthly support, improvements and advice as your business grows.", "e_tag": "Most popular", "hire": "Hiring? I'm also open to contract, freelance and full-time roles in AI, data and automation.", "hire_link": "See my portfolio and résumé", "q6": "Do you work with any industry?", "a6": "Yes. Every business runs on customers, data and routine work. I learn yours first.", "w4": "A recruiter or hiring manager", "n_hire": "Hiring (contract or full-time)"};
+  var root = document.documentElement, lang = "en";
+  var nodes = document.querySelectorAll("[data-i18n]");
+  var tr = function(k){ return (lang === "fa" ? FA[k] : EN[k]) || k; };
+  function setLang(l){
+    lang = l; root.lang = l; root.dir = l === "fa" ? "rtl" : "ltr";
+    nodes.forEach(function(n){ n.textContent = tr(n.dataset.i18n); });
+    document.querySelectorAll("[data-set-lang]").forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.setLang === l); });
+    document.title = l === "fa" ? "نیلان بیگی — هوش مصنوعی، اتوماسیون و راهکارهای دیجیتال" : "Nilan Beigi — AI, Automation & Digital Solutions";
+    document.getElementById("err").textContent = "";
+    var k = document.getElementById("kpiNum"); if (k) k.textContent = money(48250);
+    try { localStorage.setItem("nb-lang", l); } catch(e){}
+  }
+  document.querySelectorAll("[data-set-lang]").forEach(function(b){ b.addEventListener("click", function(){ setLang(b.dataset.setLang); }); });
+
+  function money(n){ var s = Math.round(n).toLocaleString("en-US"); return lang === "fa" ? s.replace(/\d/g, function(d){ return "۰۱۲۳۴۵۶۷۸۹"[d]; }).replace(/,/g, "٬") + " دلار" : "$" + s; }
+  /* showcase: website, AI assistant, automation, dashboard */
+  var show = document.querySelector(".show"), scenes = show.querySelectorAll(".scene"), stabs = show.querySelectorAll(".show-tabs button");
+  var urls = ["your-business.com", "your-business.com/chat", "your-business.com/automation", "your-business.com/dashboard"], cur = 0, timer = null, DUR = 4600;
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function countUp(){
+    var el = document.getElementById("kpiNum"), t0 = null, target = 48250;
+    if (reduce){ el.textContent = money(target); return; }
+    function step(ts){ if (!t0) t0 = ts; var p = Math.min((ts - t0) / 1300, 1); el.textContent = money(target * (1 - Math.pow(1 - p, 3))); if (p < 1 && cur === 3) requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+  }
+  function go(n){
+    cur = n;
+    scenes.forEach(function(sc, i){ sc.classList.remove("on"); if (i === n){ void sc.offsetWidth; sc.classList.add("on"); } });
+    stabs.forEach(function(b, i){ b.setAttribute("aria-selected", i === n); var em = b.querySelector("em"); em.style.animation = "none"; void em.offsetWidth; em.style.animation = ""; });
+    document.getElementById("showUrl").textContent = urls[n];
+    if (n === 3) countUp();
+  }
+  function start(){ if (reduce) return; clearInterval(timer); timer = setInterval(function(){ go((cur + 1) % scenes.length); }, DUR); }
+  stabs.forEach(function(b, i){ b.addEventListener("click", function(){ go(i); start(); }); });
+  show.addEventListener("mouseenter", function(){ clearInterval(timer); show.classList.add("paused"); });
+  show.addEventListener("mouseleave", function(){ show.classList.remove("paused"); start(); });
+  show.style.setProperty("--dur", DUR + "ms");
+  go(0); start();
+
+  /* header shadow */
+  var hdr = document.getElementById("hdr");
+  window.addEventListener("scroll", function(){ hdr.classList.toggle("scrolled", window.scrollY > 10); }, {passive:true});
+
+  /* scroll reveal */
+  var rv = document.querySelectorAll(".rv");
+  if ("IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(es){ es.forEach(function(x){ if (x.isIntersecting){ x.target.classList.add("in"); io.unobserve(x.target); } }); }, {threshold:.12, rootMargin:"0px 0px -40px 0px"});
+    rv.forEach(function(el){ io.observe(el); });
+  } else rv.forEach(function(el){ el.classList.add("in"); });
+
+  /* scale live website previews to fit their frames */
+  function fit(){ document.querySelectorAll(".viewport").forEach(function(v){ var f = v.querySelector("iframe"); if (f) f.style.transform = "scale(" + (v.clientWidth / 1280) + ")"; }); }
+  fit(); window.addEventListener("resize", fit);
+
+  /* contact form */
+  document.getElementById("bookForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    var f = e.target, err = document.getElementById("err");
+    if (!f.name.value.trim()){ err.textContent = tr("err_name"); f.name.focus(); return; }
+    if (!f.contact.value.trim()){ err.textContent = tr("err_contact"); f.contact.focus(); return; }
+    var ints = Array.prototype.filter.call(f.querySelectorAll('input[name="int"]'), function(c){ return c.checked; })
+      .map(function(c){ return EN[c.closest("label").querySelector("[data-i18n]").dataset.i18n]; });
+    if (!ints.length){ err.textContent = tr("err_int"); return; }
+    err.textContent = "";
+    var body = ["Name: " + f.name.value.trim(), "Company: " + (f.co.value.trim() || "-"), "Contact: " + f.contact.value.trim(),
+      "I am: " + f.who.value, "Interested in:\n- " + ints.join("\n- "), "", f.msg.value.trim()].join("\n");
+    window.location.href = "mailto:nilan.beigi.beigi@gmail.com?subject=" + encodeURIComponent("Consultation request" + (f.co.value.trim() ? " — " + f.co.value.trim() : "")) + "&body=" + encodeURIComponent(body);
+  });
+  var saved = null; try { saved = localStorage.getItem("nb-lang"); } catch(e){}
+  if (saved === "fa" || (!saved && /^fa\b/i.test(navigator.language || ""))) setLang("fa");
+})();
+</script>
+</body>
+</html>
